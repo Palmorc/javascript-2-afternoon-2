@@ -224,15 +224,16 @@ function addItem(myGroceryList,item){
 /*
   Write a function called maker that creates an array, fills that array with numbers from 1 to 215, then returns the array.
 */
-let fillArr = []
+
 function maker(arr){
-  for (var i = 0; i < 215; i++) {
-    fillArr.push(arr[i]+1)
+  let fillArr = []
+  for (var i = 1; i <=215; i++) {
+    fillArr.push(i)
   }
   return fillArr;
 }
 
-
+console.log(maker());
 
 ////////// PROBLEM 10 //////////
 
@@ -297,12 +298,14 @@ function longer(arr1,arr2){
 */
 
 function both(arr1,arr2){
-  let array = []
-  if(arr2.indexOf(arr[i])!== -1){
-    array.push(arr[i])
+  let arrays = []
+  for (var i = 0; i < arr1.length; i++) {
+    for (var j = 0; j < arr2.length; j++) {
+      if(arr1[i]===arr2[j]){arrays.push(arr1[i])}
+    }
   }
+  return arrays;
 }
-
 
 ////////// PROBLEM 12 //////////
 
@@ -340,7 +343,7 @@ var colt = {
   After that console.log the length of the Array and make sure that it's equal to 4.
 */
 
-//Code Here
+devMountainEmployees.push(tyler,cahlan,ryan,colt)
 
 
 
@@ -349,7 +352,11 @@ var colt = {
   Loop through your devMountainEmployees until you find cahlan, then remove him from the array.
 */
 
-//Code Here
+for (var i = 0; i < devMountainEmployees.length; i++) {
+  if (devMountainEmployees[i] === cahlan) {
+    devMountainEmployees.splice(i,1)
+  }
+}
 
 
 
@@ -380,7 +387,11 @@ var user1 = {
 };
 // Do not edit the code above.
 
-//Code Here
+var users = [{
+  user1 : {name: 'Tyler McGinnis',email: 'tylermcginnis33@gmail.com',password: 'iLoveJavaScript',username: 'infiniteLoop'},
+  user2 : {name: 'Palmer', email: 'palmercampbell@gmail.com', password:'alfonso',username:'Palmorc'},
+  user3 : {name: 'Jadyn', email: 'jadyn@gmail.com', password:'llama',username:'jadyn1'}
+}]
 
 
 
